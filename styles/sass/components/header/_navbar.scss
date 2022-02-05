@@ -1,0 +1,48 @@
+.header {
+  &__navbar {
+    position: absolute;
+    right: 0;
+    width: 830px;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.04);
+    backdrop-filter: blur(81.5485px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    &__links {
+      @include navtext;
+      display: flex;
+      align-items: center;
+      color: $white;
+      height: 100%;
+    }
+    &__link {
+      cursor: pointer;
+      position: relative;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      &::before {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background-color: $white;
+        height: 3px;
+        opacity: 0;
+        transition: opacity 200ms ease-in-out;
+      }
+      &.active::before {
+        opacity: 1;
+      }
+      &:hover::before {
+        opacity: 0.5;
+      }
+      &:not(:last-child) {
+        margin-right: 48px;
+      }
+    }
+  }
+}

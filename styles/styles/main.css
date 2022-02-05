@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Barlow+Condensed&family=Bellefair&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;700&family=Bellefair&display=swap");
 *,
 *::before,
 *::after {
@@ -13,6 +13,7 @@
 body {
   background-color: #0b0d17;
   min-height: 100vh;
+  color: #ffffff;
 }
 
 ul {
@@ -27,6 +28,7 @@ a {
 .layout {
   position: relative;
   min-height: 100vh;
+  height: 100vh;
   padding: 131px 165px;
   background-size: cover;
   background-position: center;
@@ -92,7 +94,7 @@ a {
   font-family: "Bellefair", serif;
   text-transform: uppercase;
   font-family: "Barlow Condensed", sans-serif;
-  font-weight: 16px;
+  font-size: 16px;
   letter-spacing: 2.7px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -117,6 +119,10 @@ a {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+}
+
+.header__navbar__link b {
+  font-weight: bold;
 }
 
 .header__navbar__link::before {
@@ -148,5 +154,99 @@ a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  height: 100%;
+  width: 100%;
+}
+
+.main-section__body {
+  margin-top: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  max-width: -webkit-min-content;
+  max-width: -moz-min-content;
+  max-width: min-content;
+}
+
+.main-section__body__heading {
+  font-weight: 400;
+  font-family: "Bellefair", serif;
+  text-transform: uppercase;
+  font-family: "Barlow Condensed", sans-serif;
+  font-size: 28px;
+  letter-spacing: 4.75px;
+  color: #d0d6f9;
+  margin-bottom: 10px;
+}
+
+.main-section__body b {
+  font-weight: 400;
+  font-family: "Bellefair", serif;
+  text-transform: uppercase;
+  font-size: 150px;
+}
+
+.main-section__body__text {
+  font-weight: 400;
+  font-family: "Bellefair", serif;
+  text-transform: uppercase;
+  font-family: "Barlow Condensed", sans-serif;
+  font-size: 18px;
+  line-height: 32px;
+  color: #d0d6f9;
+  text-transform: initial;
+}
+
+.main-section__explore {
+  margin-top: auto;
+  width: 274px;
+  height: 274px;
+  border-radius: 50%;
+  background-color: #ffffff;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-weight: 400;
+  font-family: "Bellefair", serif;
+  text-transform: uppercase;
+  font-size: 32px;
+  color: #000;
+}
+
+.main-section__explore::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background-color: #ffffff;
+  opacity: 0;
+  -webkit-transition: all 200ms ease-in-out;
+  transition: all 200ms ease-in-out;
+  cursor: pointer;
+}
+
+.main-section__explore:hover::before {
+  width: 450px;
+  height: 450px;
+  opacity: 0.1;
 }
 /*# sourceMappingURL=main.css.map */

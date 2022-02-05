@@ -5,46 +5,56 @@
 }
 @mixin heading1 {
   @include text-style;
-  font-weight: 150px;
+  font-size: 150px;
 }
 
 @mixin heading2 {
   @include text-style;
-  font-weight: 100px;
+  font-size: 100px;
 }
 
 @mixin heading3 {
   @include text-style;
-  font-weight: 56px;
+  font-size: 56px;
 }
 
 @mixin heading4 {
   @include text-style;
-  font-weight: 32px;
+  font-size: 32px;
 }
 
 @mixin heading5 {
   @include text-style;
   font-family: "Barlow Condensed", sans-serif;
-  font-weight: 28px;
+  font-size: 28px;
   letter-spacing: 4.75px;
+  color: $light-blue;
 }
 
 @mixin subheading1 {
   @include text-style;
-  font-weight: 28px;
+  font-size: 28px;
 }
 
 @mixin subheading2 {
   @include text-style;
   font-family: "Barlow Condensed", sans-serif;
-  font-weight: 14px;
+  font-size: 14px;
   letter-spacing: 2.35px;
 }
 
 @mixin navtext {
   @include text-style;
   font-family: "Barlow Condensed", sans-serif;
-  font-weight: 16px;
+  font-size: 16px;
   letter-spacing: 2.7px;
+}
+
+@mixin bodytext {
+  @include text-style;
+  font-family: "Barlow Condensed", sans-serif;
+  font-size: 18px;
+  line-height: 32px;
+  color: $light-blue;
+  text-transform: initial;
 }

@@ -24,6 +24,19 @@ a {
   color: #ffffff;
 }
 
+.layout {
+  position: relative;
+  min-height: 100vh;
+  padding: 131px 165px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.layout.home {
+  background-image: url("../../assets/home/background-home-desktop.jpg");
+}
+
 .header {
   height: 96px;
   position: absolute;
@@ -129,5 +142,11 @@ a {
 
 .header__navbar__link:not(:last-child) {
   margin-right: 48px;
+}
+
+.main-section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 /*# sourceMappingURL=main.css.map */

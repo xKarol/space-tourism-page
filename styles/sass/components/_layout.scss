@@ -1,0 +1,12 @@
+$homeImg: "../../assets/home/background-home-desktop.jpg";
+.layout {
+  position: relative;
+  min-height: 100vh;
+  padding: 131px 165px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  &.home {
+    background-image: url($homeImg);
+  }
+}

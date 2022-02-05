@@ -1,4 +1,6 @@
 @import "variables";
 @import "globals";
 @import "mixins";
+@import "./components/layout";
 @import "./components/header/index";
+@import "./components/main-section";

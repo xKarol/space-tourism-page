@@ -6,12 +6,12 @@ export default function NavbarLink({ number, text, href }) {
   const active = router.asPath === href;
 
   return (
-    <Link href={href} passHref>
-      <li className={`navbar__link ${active ? "active" : ""}`}>
-        <a>
+    <li className={`navbar__link ${active ? "active" : ""}`}>
+      <Link href={href}>
+        <a aria-label={text}>
           <b>{number.toString().padStart(2, "0")}</b> {text}
         </a>
-      </li>
-    </Link>
+      </Link>
+    </li>
   );
 }

@@ -20,13 +20,14 @@ export default function Sliders({
       className={`sliders ${type === TECHNOLOGY_SLIDER ? "--technology" : ""}`}
     >
       {[...new Array(total)].slice(0, 4).map((_, index) => (
-        <span
+        <button
           key={index}
           className={`sliders__slider ${activeId === index ? "active" : ""}`}
           onClick={() => increment(index)}
+          aria-label={`slider ${index + 1}`}
         >
           {index + 1}
-        </span>
+        </button>
       ))}
     </div>
   );

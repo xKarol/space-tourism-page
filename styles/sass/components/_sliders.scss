@@ -9,6 +9,7 @@
     opacity: 0.17;
     transition: all 200ms ease-in-out;
     cursor: pointer;
+    color: transparent;
     &:hover {
       opacity: 0.5;
     }
@@ -24,6 +25,7 @@
     margin-right: 80px;
     margin-top: 0px;
     .sliders__slider {
+      color: $white;
       opacity: 1;
       background-color: transparent;
       width: 80px;

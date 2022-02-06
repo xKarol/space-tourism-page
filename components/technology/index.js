@@ -4,7 +4,8 @@ import Layout from "../layout";
 import Heading from "../heading";
 import TechnologyContext from "../../context/TechnologyContext";
 import TechnologyImage from "./technology-image";
-import Sliders from "./sliders";
+import Slider from "../sliders";
+import { TECHNOLOGY_SLIDER } from "../../constants/slider";
 
 export default function Technology({ technology }) {
   const [activeId, setActiveId] = useState(0);
@@ -21,7 +22,13 @@ export default function Technology({ technology }) {
 
           <div className="main-section__container">
             <div className="main-section__technology-box">
-              <Sliders />
+              <Slider
+                total={3}
+                activeId={activeId}
+                increment={setActiveId}
+                type={TECHNOLOGY_SLIDER}
+              />
+
               <section className="main-section__body">
                 <h2 className="main-section__subheading --technology">
                   The terminology...

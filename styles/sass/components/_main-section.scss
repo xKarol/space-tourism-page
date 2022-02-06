@@ -81,53 +81,6 @@
       width: 444px;
       min-height: 128px;
     }
-    &__dots {
-      display: flex;
-      align-items: center;
-      margin-top: 120px;
-      > span {
-        width: 15px;
-        height: 15px;
-        border-radius: 50%;
-        background-color: $white;
-        opacity: 0.17;
-        transition: opacity 200ms ease-in-out;
-        cursor: pointer;
-        &.active {
-          opacity: 1;
-        }
-        &:not(:last-child) {
-          margin-right: 24px;
-        }
-      }
-    }
-  }
-  &__sliders {
-    display: flex;
-    flex-direction: column;
-    margin-right: 80px;
-    .slider {
-      width: 80px;
-      height: 80px;
-      border-radius: 50%;
-      border: 1px solid rgba($white, 0.25);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      cursor: pointer;
-      transition: all 200ms ease-in-out;
-      @include heading4;
-      &:hover {
-        border: 1px solid $white;
-      }
-      &.active {
-        background-color: $white;
-        color: $dark-black;
-      }
-      &:not(:last-child) {
-        margin-bottom: 32px;
-      }
-    }
   }
   &__explore {
     width: 274px;

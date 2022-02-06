@@ -11,6 +11,7 @@ export default function PlanetImage() {
         alt={currentDestination.name}
         objectFit={"contain"}
         layout="fill"
+        priority
       />
     </section>
   );

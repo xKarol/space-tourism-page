@@ -1,0 +1,33 @@
+import { useEffect } from "react";
+import { DEFAULT_SLIDER, TECHNOLOGY_SLIDER } from "../constants/slider";
+
+export default function Sliders({
+  total,
+  activeId,
+  time,
+  increment,
+  type = DEFAULT_SLIDER,
+}) {
+  useEffect(() => {
+    const timer = setInterval(() => {
+      increment(activeId >= total - 1 ? 0 : activeId + 1);
+    }, time ?? 1000 * 20);
+    return () => clearInterval(timer);
+  }, [activeId]);
+
+  return (
+    <div
+      className={`sliders ${type === TECHNOLOGY_SLIDER ? "--technology" : ""}`}
+    >
+      {[...new Array(total)].slice(0, 4).map((_, index) => (
+        <span
+          key={index}
+          className={`sliders__slider ${activeId === index ? "active" : ""}`}
+          onClick={() => increment(index)}
+        >
+          {index + 1}
+        </span>
+      ))}
+    </div>
+  );
+}

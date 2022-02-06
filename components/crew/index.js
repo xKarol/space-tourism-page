@@ -2,7 +2,7 @@ import Heading from "../heading";
 import Header from "../header";
 import Layout from "../layout";
 import { useState } from "react";
-import Sliders from "./sliders";
+import Slider from "../sliders";
 import CrewContext from "../../context/CrewContext";
 import CrewImage from "./crew-image";
 
@@ -23,7 +23,7 @@ export default function Crew({ crew }) {
                 {currentCrew.name}
               </h1>
               <p className="main-section__body__text">{currentCrew.bio}</p>
-              <Sliders />
+              <Slider total={4} activeId={activeId} increment={setActiveId} />
             </section>
             <CrewImage />
           </div>

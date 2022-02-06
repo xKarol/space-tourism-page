@@ -1,6 +1,7 @@
 $homeImg: "../../public/assets/home/background-home-desktop.jpg";
 $destinationImg: "../../public/assets/destination/background-destination-desktop.jpg";
 $crewImg: "../../public/assets/crew/background-crew-desktop.jpg";
+$technologyImg: "../../public/assets/technology/background-technology-desktop.jpg";
 
 .layout {
   position: relative;
@@ -19,5 +20,9 @@ $crewImg: "../../public/assets/crew/background-crew-desktop.jpg";
   }
   &.crew {
     background-image: url($crewImg);
+  }
+  &.technology {
+    background-image: url($technologyImg);
+    padding-right: 0;
   }
 }

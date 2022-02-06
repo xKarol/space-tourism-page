@@ -1,8 +1,9 @@
 import data from "../data.json";
+import Technology from "../components/technology";
 
-export default function Technology({ technology }) {
+export default function TechnologyPage({ technology }) {
   console.log(technology);
-  return <></>;
+  return <Technology technology={technology} />;
 }
 
 export async function getStaticProps() {

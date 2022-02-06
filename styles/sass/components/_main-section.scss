@@ -68,11 +68,20 @@
       height: 712px;
       width: 558px;
     }
+    &.--technology {
+      width: 515px;
+      height: 527px;
+    }
   }
   &__subheading {
     opacity: 0.5;
     margin-bottom: 15px;
     @include heading4;
+    &.--technology {
+      @include navtext;
+      opacity: 1;
+      color: $light-blue;
+    }
   }
   &__heading {
     @include heading5;
@@ -91,16 +100,24 @@
       @include heading2;
       color: $white;
     }
+    &.--technology {
+      @include heading3;
+      color: $white;
+    }
     &.--crew-name {
       @include heading3;
       margin-bottom: 27px;
       color: $white;
     }
   }
+  &__technology-box {
+    display: flex;
+  }
   &__body {
     display: flex;
     flex-direction: column;
     max-width: min-content;
+    min-height: 350px;
     b {
       @include heading1;
     }
@@ -118,7 +135,7 @@
         height: 15px;
         border-radius: 50%;
         background-color: $white;
-        opacity: 0.5;
+        opacity: 0.17;
         transition: opacity 200ms ease-in-out;
         cursor: pointer;
         &.active {
@@ -127,6 +144,33 @@
         &:not(:last-child) {
           margin-right: 24px;
         }
+      }
+    }
+  }
+  &__sliders {
+    display: flex;
+    flex-direction: column;
+    margin-right: 80px;
+    .slider {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      border: 1px solid rgba($white, 0.25);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: all 200ms ease-in-out;
+      @include heading4;
+      &:hover {
+        border: 1px solid $white;
+      }
+      &.active {
+        background-color: $white;
+        color: $dark-black;
+      }
+      &:not(:last-child) {
+        margin-bottom: 32px;
       }
     }
   }

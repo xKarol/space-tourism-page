@@ -17,7 +17,7 @@ export default function Technology({ technology }) {
       <Layout className="technology">
         <Header />
         <section className="main-section">
-          <Heading number={2} text={"Space launch 101"} />
+          <Heading number={3} text={"Space launch 101"} />
 
           <div className="main-section__container">
             <div className="main-section__technology-box">

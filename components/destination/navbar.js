@@ -6,7 +6,7 @@ export default function Navbar() {
   const { destinations } = useContext(DestinationContext);
 
   return (
-    <nav className="main-section__nav">
+    <nav className="destination__navbar">
       {destinations.slice(0, 4).map((destination, index) => (
         <NavItem key={index} index={index} name={destination.name} />
       ))}

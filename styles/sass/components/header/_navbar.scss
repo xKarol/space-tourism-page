@@ -1,35 +1,32 @@
-.header {
-  &__navbar {
-    position: absolute;
-    right: 0;
-    width: 830px;
+.navbar {
+  position: absolute;
+  right: 0;
+  width: 830px;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.04);
+  backdrop-filter: blur(81.5485px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  &__links {
+    @include navtext;
+    display: flex;
+    align-items: center;
     height: 100%;
-    background: rgba(255, 255, 255, 0.04);
-    backdrop-filter: blur(81.5485px);
+  }
+  &__link {
+    cursor: pointer;
+    position: relative;
+    height: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
-    &__links {
-      @include navtext;
-      display: flex;
-      align-items: center;
-      color: $white;
-      height: 100%;
+    b {
+      font-weight: bold;
     }
-    &__link {
-      cursor: pointer;
-      position: relative;
-      height: 100%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      b {
-        font-weight: bold;
-      }
-      @include nav-stroke;
-      &:not(:last-child) {
-        margin-right: 48px;
-      }
+    @include nav-stroke;
+    &:not(:last-child) {
+      margin-right: 48px;
     }
   }
 }

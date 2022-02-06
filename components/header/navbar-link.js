@@ -7,7 +7,7 @@ export default function NavbarLink({ number, text, href }) {
 
   return (
     <Link href={href} passHref>
-      <li className={`header__navbar__link ${active ? "active" : ""}`}>
+      <li className={`navbar__link ${active ? "active" : ""}`}>
         <a>
           <b>{number.toString().padStart(2, "0")}</b> {text}
         </a>

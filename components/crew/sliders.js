@@ -10,12 +10,13 @@ export default function Dots() {
     }, 1000 * 20);
     return () => clearInterval(timer);
   }, [activeId]);
+
   return (
-    <div className="main-section__body__dots">
+    <div className="sliders">
       {crew.slice(0, 4).map((_, index) => (
         <span
           key={index}
-          className={`${activeId === index ? "active" : ""}`}
+          className={`sliders__slider ${activeId === index ? "active" : ""}`}
           onClick={() => setActiveId(index)}
         />
       ))}

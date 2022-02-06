@@ -16,6 +16,7 @@
 @mixin heading3 {
   @include text-style;
   font-size: 56px;
+  color: $white;
 }
 
 @mixin heading4 {
@@ -41,6 +42,7 @@
   font-family: "Barlow Condensed", sans-serif;
   font-size: 14px;
   letter-spacing: 2.35px;
+  color: $light-blue;
 }
 
 @mixin navtext {

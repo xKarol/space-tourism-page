@@ -2,8 +2,7 @@ import Heading from "../heading";
 import Header from "../header";
 import Layout from "../layout";
 import { useState } from "react";
-import Image from "next/image";
-import Dots from "./dots";
+import Sliders from "./sliders";
 import CrewContext from "../../context/CrewContext";
 import CrewImage from "./crew-image";
 
@@ -24,7 +23,7 @@ export default function Crew({ crew }) {
                 {currentCrew.name}
               </h1>
               <p className="main-section__body__text">{currentCrew.bio}</p>
-              <Dots />
+              <Sliders />
             </section>
             <CrewImage />
           </div>

@@ -1,0 +1,49 @@
+.sliders {
+  margin-top: 120px;
+  display: flex;
+  &__slider {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: $white;
+    opacity: 0.17;
+    transition: all 200ms ease-in-out;
+    cursor: pointer;
+    &:hover {
+      opacity: 0.5;
+    }
+    &.active {
+      opacity: 1;
+    }
+    &:not(:last-child) {
+      margin-right: 24px;
+    }
+  }
+  &.--technology {
+    flex-direction: column;
+    margin-right: 80px;
+    margin-top: 0px;
+    .sliders__slider {
+      opacity: 1;
+      background-color: transparent;
+      width: 80px;
+      height: 80px;
+      border: 1px solid rgba($white, 0.25);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      @include heading4;
+      &:not(:last-child) {
+        margin-right: 0;
+        margin-bottom: 32px;
+      }
+      &.active {
+        background-color: $white;
+        color: $dark-black;
+      }
+      &:hover {
+        border: 1px solid $white;
+      }
+    }
+  }
+}

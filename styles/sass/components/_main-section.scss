@@ -5,50 +5,7 @@
   height: 100%;
   width: 100%;
   position: relative;
-  &__nav {
-    display: flex;
-    height: 34px;
-    margin-bottom: 37px;
-    &__link {
-      height: 100%;
-      cursor: pointer;
-      color: $light-blue;
-      position: relative;
-      &.active {
-        color: $white;
-      }
-      @include navtext;
-      @include nav-stroke;
-      &:not(:last-child) {
-        margin-right: 35px;
-      }
-    }
-  }
-  &__planet-data {
-    width: 100%;
-    border-top: 1px solid rgba($white, 0.25);
-    margin-top: 54px;
-    display: flex;
-    padding-top: 28px;
-    &__info {
-      flex-shrink: 0;
-      &:last-child {
-        margin-left: 79px;
-      }
-      &__heading,
-      &__text {
-        text-transform: uppercase;
-      }
-      &__heading {
-        @include subheading2;
-        color: $light-blue;
-        margin-bottom: 12px;
-      }
-      &__text {
-        @include subheading1;
-      }
-    }
-  }
+
   &__container {
     display: flex;
     justify-content: space-between;
@@ -102,12 +59,10 @@
     }
     &.--technology {
       @include heading3;
-      color: $white;
     }
     &.--crew-name {
       @include heading3;
       margin-bottom: 27px;
-      color: $white;
     }
   }
   &__technology-box {

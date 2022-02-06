@@ -1,0 +1,24 @@
+.destination__data-info {
+  width: 100%;
+  border-top: 1px solid rgba($white, 0.25);
+  margin-top: 54px;
+  display: flex;
+  padding-top: 28px;
+  &__info {
+    flex-shrink: 0;
+    &:last-child {
+      margin-left: 79px;
+    }
+    &__heading,
+    &__text {
+      text-transform: uppercase;
+    }
+    &__heading {
+      @include subheading2;
+      margin-bottom: 12px;
+    }
+    &__text {
+      @include subheading1;
+    }
+  }
+}

@@ -6,7 +6,7 @@ export default function NavbarItem({ name, index }) {
   return (
     <label
       onClick={() => setActiveId(index)}
-      className={`main-section__nav__link ${
+      className={`destination__navbar__link ${
         activeId === index ? "active" : ""
       }`}
     >

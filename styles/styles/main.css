@@ -25,6 +25,10 @@ a {
   color: #ffffff;
 }
 
+.logo {
+  cursor: pointer;
+}
+
 .layout {
   position: relative;
   min-height: 100vh;

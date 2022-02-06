@@ -58,3 +58,23 @@
   color: $light-blue;
   text-transform: initial;
 }
+
+@mixin nav-stroke {
+  &::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: $white;
+    height: 3px;
+    opacity: 0;
+    transition: opacity 200ms ease-in-out;
+  }
+  &.active::before {
+    opacity: 1;
+  }
+  &:hover::before {
+    opacity: 0.5;
+  }
+}

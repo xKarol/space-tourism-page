@@ -1,26 +1,102 @@
 .main-section {
   display: flex;
+  align-items: center;
   justify-content: space-between;
   height: 100%;
   width: 100%;
+  position: relative;
+  &__nav {
+    display: flex;
+    height: 34px;
+    margin-bottom: 37px;
+    &__link {
+      height: 100%;
+      cursor: pointer;
+      color: $light-blue;
+      position: relative;
+      &.active {
+        color: $white;
+      }
+      @include navtext;
+      @include nav-stroke;
+      &:not(:last-child) {
+        margin-right: 35px;
+      }
+    }
+  }
+  &__planet-data {
+    width: 100%;
+    border-top: 1px solid rgba($white, 0.25);
+    margin-top: 54px;
+    display: flex;
+    padding-top: 28px;
+    &__info {
+      flex-shrink: 0;
+      &:last-child {
+        margin-left: 79px;
+      }
+      &__heading,
+      &__text {
+        text-transform: uppercase;
+      }
+      &__heading {
+        @include subheading2;
+        color: $light-blue;
+        margin-bottom: 12px;
+      }
+      &__text {
+        @include subheading1;
+      }
+    }
+  }
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    position: relative;
+    padding-top: 177px;
+    &.--home {
+      padding-top: 0px;
+    }
+  }
+  &__image {
+    width: 450px;
+    height: 450px;
+    position: relative;
+  }
+  &__heading {
+    @include heading5;
+    margin-bottom: 10px;
+    &.--other {
+      position: absolute;
+      top: 76px;
+      left: 0;
+      color: $white;
+      b {
+        @include heading5;
+        opacity: 0.25;
+      }
+    }
+    &.--name {
+      @include heading2;
+      color: $white;
+    }
+  }
   &__body {
-    margin-top: auto;
     display: flex;
     flex-direction: column;
     max-width: min-content;
-    &__heading {
-      @include heading5;
-      margin-bottom: 10px;
-    }
     b {
       @include heading1;
     }
     &__text {
       @include bodytext;
+      width: 444px;
+      min-height: 128px;
     }
   }
   &__explore {
-    margin-top: auto;
     width: 274px;
     height: 274px;
     border-radius: 50%;
@@ -29,6 +105,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    margin-top: auto;
     @include heading4;
     color: #000;
     &::before {

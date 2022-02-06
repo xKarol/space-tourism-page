@@ -1,11 +1,15 @@
 import Image from "next/image";
 import Link from "next/link";
-import logo from "../assets/shared/logo.svg";
 
 export default function Logo() {
   return (
     <Link href="/" passHref>
-      <Image src={logo} alt="space tourism logo" />
+      <Image
+        src={"/assets/shared/logo.svg"}
+        alt="space tourism logo"
+        width={48}
+        height={48}
+      />
     </Link>
   );
 }

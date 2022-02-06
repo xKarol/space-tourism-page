@@ -1,7 +1,11 @@
-$homeImg: "../../assets/home/background-home-desktop.jpg";
+$homeImg: "../../public/assets/home/background-home-desktop.jpg";
+$destinationImg: "../../public/assets/destination/background-destination-desktop.jpg";
+$crewImg: "../../public/assets/crew/background-crew-desktop.jpg";
+
 .layout {
   position: relative;
   min-height: 100vh;
+  min-height: 900px;
   height: 100vh;
   padding: 131px 165px;
   background-size: cover;
@@ -9,5 +13,11 @@ $homeImg: "../../assets/home/background-home-desktop.jpg";
   background-repeat: no-repeat;
   &.home {
     background-image: url($homeImg);
+  }
+  &.destination {
+    background-image: url($destinationImg);
+  }
+  &.crew {
+    background-image: url($crewImg);
   }
 }

@@ -1,9 +1,16 @@
 import data from "../data.json";
 import Technology from "../components/technology";
+import Head from "next/head";
 
 export default function TechnologyPage({ technology }) {
-  console.log(technology);
-  return <Technology technology={technology} />;
+  return (
+    <>
+      <Head>
+        <title>Space Tourism | Technology</title>
+      </Head>
+      <Technology technology={technology} />
+    </>
+  );
 }
 
 export async function getStaticProps() {

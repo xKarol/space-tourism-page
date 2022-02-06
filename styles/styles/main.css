@@ -332,52 +332,6 @@ a {
   min-height: 128px;
 }
 
-.main-section__explore {
-  width: 274px;
-  height: 274px;
-  border-radius: 50%;
-  background-color: #ffffff;
-  position: relative;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  margin-top: auto;
-  font-weight: 400;
-  font-family: "Bellefair", serif;
-  text-transform: uppercase;
-  font-size: 32px;
-  color: #000;
-}
-
-.main-section__explore::before {
-  content: "";
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-  width: 100%;
-  height: 100%;
-  border-radius: 50%;
-  background-color: #ffffff;
-  opacity: 0;
-  -webkit-transition: all 200ms ease-in-out;
-  transition: all 200ms ease-in-out;
-  cursor: pointer;
-}
-
-.main-section__explore:hover::before {
-  width: 450px;
-  height: 450px;
-  opacity: 0.1;
-}
-
 .destination__navbar {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -467,6 +421,52 @@ a {
   font-family: "Bellefair", serif;
   text-transform: uppercase;
   font-size: 28px;
+}
+
+.home__explore {
+  width: 274px;
+  height: 274px;
+  border-radius: 50%;
+  background-color: #ffffff;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: auto;
+  font-weight: 400;
+  font-family: "Bellefair", serif;
+  text-transform: uppercase;
+  font-size: 32px;
+  color: #000;
+}
+
+.home__explore::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background-color: #ffffff;
+  opacity: 0;
+  -webkit-transition: all 200ms ease-in-out;
+  transition: all 200ms ease-in-out;
+  cursor: pointer;
+}
+
+.home__explore:hover::before {
+  width: 450px;
+  height: 450px;
+  opacity: 0.1;
 }
 
 .sliders {

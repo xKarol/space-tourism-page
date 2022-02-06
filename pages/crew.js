@@ -1,8 +1,9 @@
 import data from "../data.json";
+import Crew from "../components/crew";
 
-export default function Crew({ crew }) {
+export default function CrewPage({ crew }) {
   console.log(crew);
-  return <></>;
+  return <Crew crew={crew} />;
 }
 
 export async function getStaticProps() {

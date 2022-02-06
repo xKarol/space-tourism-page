@@ -1,7 +1,7 @@
 import { useState } from "react";
 import Header from "../header";
 import Layout from "../layout";
-import Heading from "./heading";
+import Heading from "../heading";
 import Navbar from "./navbar";
 import DestinationContext from "../../context/DestinationContext";
 import DataInfo from "./data-info";

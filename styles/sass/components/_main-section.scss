@@ -64,6 +64,15 @@
     width: 450px;
     height: 450px;
     position: relative;
+    &.--crew {
+      height: 712px;
+      width: 558px;
+    }
+  }
+  &__subheading {
+    opacity: 0.5;
+    margin-bottom: 15px;
+    @include heading4;
   }
   &__heading {
     @include heading5;
@@ -82,6 +91,11 @@
       @include heading2;
       color: $white;
     }
+    &.--crew-name {
+      @include heading3;
+      margin-bottom: 27px;
+      color: $white;
+    }
   }
   &__body {
     display: flex;
@@ -94,6 +108,26 @@
       @include bodytext;
       width: 444px;
       min-height: 128px;
+    }
+    &__dots {
+      display: flex;
+      align-items: center;
+      margin-top: 120px;
+      > span {
+        width: 15px;
+        height: 15px;
+        border-radius: 50%;
+        background-color: $white;
+        opacity: 0.5;
+        transition: opacity 200ms ease-in-out;
+        cursor: pointer;
+        &.active {
+          opacity: 1;
+        }
+        &:not(:last-child) {
+          margin-right: 24px;
+        }
+      }
     }
   }
   &__explore {

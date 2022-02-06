@@ -9,6 +9,7 @@ export default function PlanetImage() {
       <Image
         src={currentDestination.images.webp.substring(1)}
         alt={currentDestination.name}
+        objectFit={"contain"}
         layout="fill"
       />
     </section>

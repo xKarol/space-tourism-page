@@ -5,7 +5,7 @@ import Heading from "../heading";
 import Navbar from "./navbar";
 import DestinationContext from "../../context/DestinationContext";
 import DataInfo from "./data-info";
-import PlanetImage from "./planet-image";
+import Image from "next/image";
 
 export default function Destination({ destinations }) {
   const [activeId, setActiveId] = useState(0);
@@ -21,10 +21,17 @@ export default function Destination({ destinations }) {
           <Heading number={1} text={"Pick your destination"} />
 
           <div className="main-section__container">
-            <PlanetImage />
+            <Image
+              src={currentDestination.images.webp.substring(1)}
+              alt={currentDestination.name}
+              width={450}
+              height={450}
+              objectFit={"contain"}
+              priority
+            />
             <section className="main-section__body">
               <Navbar />
-              <h1 className="main-section__heading --name">
+              <h1 className="main-section__heading heading-2">
                 {currentDestination.name}
               </h1>
               <p className="main-section__body__text">

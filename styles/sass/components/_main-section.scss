@@ -17,19 +17,6 @@
       padding-top: 0px;
     }
   }
-  &__image {
-    width: 450px;
-    height: 450px;
-    position: relative;
-    &.--crew {
-      height: 712px;
-      width: 558px;
-    }
-    &.--technology {
-      width: 515px;
-      height: 527px;
-    }
-  }
   &__subheading {
     opacity: 0.5;
     margin-bottom: 15px;
@@ -41,9 +28,9 @@
     }
   }
   &__heading {
-    @include heading5;
     margin-bottom: 10px;
-    &.--other {
+    &.--absolute {
+      @include heading5;
       position: absolute;
       top: 76px;
       left: 0;
@@ -53,14 +40,8 @@
         opacity: 0.25;
       }
     }
-    &.--name {
-      @include heading2;
-      color: $white;
-    }
-    &.--technology {
-      @include heading3;
-    }
-    &.--crew-name {
+
+    &.--crew {
       @include heading3;
       margin-bottom: 27px;
     }
@@ -73,9 +54,6 @@
     flex-direction: column;
     max-width: min-content;
     min-height: 350px;
-    b {
-      @include heading1;
-    }
     &__text {
       @include bodytext;
       width: 444px;

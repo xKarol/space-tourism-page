@@ -4,7 +4,7 @@ import Layout from "../layout";
 import { useState } from "react";
 import Slider from "../sliders";
 import CrewContext from "../../context/CrewContext";
-import CrewImage from "./crew-image";
+import Image from "next/image";
 
 export default function Crew({ crew }) {
   const [activeId, setActiveId] = useState(0);
@@ -19,13 +19,21 @@ export default function Crew({ crew }) {
           <div className="main-section__container">
             <section className="main-section__body">
               <h2 className="main-section__subheading">{currentCrew.role}</h2>
-              <h1 className="main-section__heading --crew-name">
+              <h1 className="main-section__heading --crew">
                 {currentCrew.name}
               </h1>
               <p className="main-section__body__text">{currentCrew.bio}</p>
               <Slider total={4} activeId={activeId} increment={setActiveId} />
             </section>
-            <CrewImage />
+
+            <Image
+              src={currentCrew.images.webp.substring(1)}
+              alt={`${currentCrew.role} ${currentCrew.name}`}
+              width={558}
+              height={712}
+              objectFit={"contain"}
+              priority
+            />
           </div>
         </section>
       </Layout>

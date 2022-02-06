@@ -3,9 +3,9 @@ import Header from "../header";
 import Layout from "../layout";
 import Heading from "../heading";
 import TechnologyContext from "../../context/TechnologyContext";
-import TechnologyImage from "./technology-image";
 import Slider from "../sliders";
 import { TECHNOLOGY_SLIDER } from "../../constants/slider";
+import Image from "next/image";
 
 export default function Technology({ technology }) {
   const [activeId, setActiveId] = useState(0);
@@ -33,7 +33,7 @@ export default function Technology({ technology }) {
                 <h2 className="main-section__subheading --technology">
                   The terminology...
                 </h2>
-                <h1 className="main-section__heading --technology">
+                <h1 className="main-section__heading heading-3">
                   {currentTechnology.name}
                 </h1>
                 <p className="main-section__body__text">
@@ -41,8 +41,14 @@ export default function Technology({ technology }) {
                 </p>
               </section>
             </div>
-
-            <TechnologyImage />
+            <Image
+              src={currentTechnology.images.portrait.substring(1)}
+              alt={currentTechnology.name}
+              width={515}
+              height={527}
+              objectFit={"contain"}
+              priority
+            />
           </div>
         </section>
       </Layout>

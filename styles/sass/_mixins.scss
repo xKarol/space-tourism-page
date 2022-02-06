@@ -11,6 +11,7 @@
 @mixin heading2 {
   @include text-style;
   font-size: 100px;
+  color: $white;
 }
 
 @mixin heading3 {

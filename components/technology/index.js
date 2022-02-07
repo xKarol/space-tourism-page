@@ -6,6 +6,8 @@ import TechnologyContext from "../../context/TechnologyContext";
 import Slider from "../sliders";
 import { TECHNOLOGY_SLIDER } from "../../constants/slider";
 import Image from "next/image";
+import Description from "../description";
+import Subheading from "../subheading";
 
 export default function Technology({ technology }) {
   const [activeId, setActiveId] = useState(0);
@@ -18,8 +20,11 @@ export default function Technology({ technology }) {
       <Layout className="technology">
         <Header />
         <section className="main-section">
-          <Heading number={3} text={"Space launch 101"} />
-
+          <Heading
+            number={3}
+            text={"Space launch 101"}
+            className="--absolute"
+          />
           <div className="main-section__container">
             <div className="main-section__technology-box">
               <Slider
@@ -30,15 +35,12 @@ export default function Technology({ technology }) {
               />
 
               <section className="main-section__body">
-                <h2 className="main-section__subheading --technology">
-                  The terminology...
-                </h2>
-                <h1 className="main-section__heading heading-3">
-                  {currentTechnology.name}
-                </h1>
-                <p className="main-section__body__text">
-                  {currentTechnology.description}
-                </p>
+                <Subheading
+                  text={"The terminology..."}
+                  className="--technology"
+                />
+                <Heading text={currentTechnology.name} className="heading-3" />
+                <Description text={currentTechnology.description} />
               </section>
             </div>
             <Image

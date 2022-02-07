@@ -4,7 +4,9 @@ import Layout from "../layout";
 import { useState } from "react";
 import Slider from "../sliders";
 import CrewContext from "../../context/CrewContext";
-import Image from "next/image";
+import ImageComponent from "../image";
+import Description from "../description";
+import Subheading from "../subheading";
 
 export default function Crew({ crew }) {
   const [activeId, setActiveId] = useState(0);
@@ -14,25 +16,18 @@ export default function Crew({ crew }) {
       <Layout className="crew">
         <Header />
         <section className="main-section">
-          <Heading number={2} text={"Meet your crew"} />
-
+          <Heading number={2} text={"Meet your crew"} className="--absolute" />
           <div className="main-section__container">
             <section className="main-section__body">
-              <h2 className="main-section__subheading">{currentCrew.role}</h2>
-              <h1 className="main-section__heading --crew">
-                {currentCrew.name}
-              </h1>
-              <p className="main-section__body__text">{currentCrew.bio}</p>
+              <Subheading text={currentCrew.role} className="--crew" />
+              <Heading text={currentCrew.name} className="--crew" />
+              <Description text={currentCrew.bio} />
               <Slider total={4} activeId={activeId} increment={setActiveId} />
             </section>
-
-            <Image
+            <ImageComponent
               src={currentCrew.images.webp.substring(1)}
               alt={`${currentCrew.role} ${currentCrew.name}`}
-              width={558}
-              height={712}
-              objectFit={"contain"}
-              priority
+              className="--crew"
             />
           </div>
         </section>

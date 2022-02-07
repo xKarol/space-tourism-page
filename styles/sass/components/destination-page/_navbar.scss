@@ -1,9 +1,10 @@
 .destination__navbar {
   display: flex;
   height: 34px;
-  margin-bottom: 37px;
+  margin-bottom: 20px;
   justify-content: center;
   @include breakpoint-up(tablet) {
+    margin-bottom: 37px;
     justify-content: flex-start;
   }
   &__link {

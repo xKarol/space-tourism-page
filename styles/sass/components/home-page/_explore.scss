@@ -1,6 +1,6 @@
 .home__explore {
-  width: 274px;
-  height: 274px;
+  width: 242px;
+  height: 242px;
   border-radius: 50%;
   background-color: $white;
   position: relative;
@@ -8,11 +8,14 @@
   align-items: center;
   justify-content: center;
   margin-top: auto;
+  flex-shrink: 0;
   @include heading4;
   color: #000;
   margin-top: 156px;
   @include breakpoint-up(tablet) {
     margin-top: 0;
+    width: 274px;
+    height: 274px;
   }
   &::before {
     content: "";

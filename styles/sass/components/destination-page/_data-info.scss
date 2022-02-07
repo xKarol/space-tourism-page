@@ -10,6 +10,10 @@
   padding-top: 28px;
   &__info {
     flex-shrink: 0;
+    text-align: center;
+    @include breakpoint-up(tablet) {
+      text-align: left;
+    }
     &:last-child {
       margin-left: 79px;
     }

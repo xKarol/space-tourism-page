@@ -13,10 +13,12 @@ $technologyImg: "../../public/assets/technology/background-technology-desktop.jp
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  padding: 90px 38px;
-  padding-top: 202px;
+  padding: 136px 2.5vw;
+  padding-bottom: 50px;
+
   @include breakpoint-up(tablet) {
-    padding: 131px 165px;
+    padding: 212px 11.5vw;
+    padding-bottom: 131px;
   }
 
   &.home {

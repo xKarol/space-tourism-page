@@ -10,6 +10,10 @@
   margin-top: auto;
   @include heading4;
   color: #000;
+  margin-top: 156px;
+  @include breakpoint-up(tablet) {
+    margin-top: 0;
+  }
   &::before {
     content: "";
     position: absolute;

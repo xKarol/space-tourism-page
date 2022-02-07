@@ -1,13 +1,20 @@
 .navbar {
   position: absolute;
   right: 0;
-  width: 830px;
   height: 100%;
   background: rgba(255, 255, 255, 0.04);
   backdrop-filter: blur(81.5485px);
-  display: flex;
   align-items: center;
   justify-content: center;
+  display: none;
+  @include breakpoint-up(mobile) {
+    width: 450px;
+    display: flex;
+  }
+  @include breakpoint-up(tablet) {
+    width: 830px;
+    display: flex;
+  }
   &__links {
     @include navtext;
     display: flex;
@@ -23,10 +30,17 @@
     justify-content: center;
     b {
       font-weight: bold;
+      display: none;
+      @include breakpoint-up(tablet) {
+        display: unset;
+      }
     }
     @include nav-stroke;
     &:not(:last-child) {
       margin-right: 48px;
+      @include breakpoint-up(tablet) {
+        margin-right: 37px;
+      }
     }
   }
 }

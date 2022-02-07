@@ -3,6 +3,10 @@
   border-top: 1px solid rgba($white, 0.25);
   margin-top: 54px;
   display: flex;
+  justify-content: center;
+  @include breakpoint-up(tablet) {
+    justify-content: flex-start;
+  }
   padding-top: 28px;
   &__info {
     flex-shrink: 0;

@@ -1,4 +1,6 @@
-$homeImg: "../../public/assets/home/background-home-desktop.jpg";
+$home-mobile-Img: "../../public/assets/home/background-home-mobile.jpg";
+$home-tablet-Img: "../../public/assets/home/background-home-tablet.jpg";
+$home-desktop-Img: "../../public/assets/home/background-home-desktop.jpg";
 $destinationImg: "../../public/assets/destination/background-destination-desktop.jpg";
 $crewImg: "../../public/assets/crew/background-crew-desktop.jpg";
 $technologyImg: "../../public/assets/technology/background-technology-desktop.jpg";
@@ -8,12 +10,23 @@ $technologyImg: "../../public/assets/technology/background-technology-desktop.jp
   min-height: 100vh;
   min-height: 900px;
   height: 100vh;
-  padding: 131px 165px;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  padding: 90px 38px;
+  padding-top: 202px;
+  @include breakpoint-up(tablet) {
+    padding: 131px 165px;
+  }
+
   &.home {
-    background-image: url($homeImg);
+    background-image: url($home-mobile-Img);
+    @include breakpoint-up(mobile) {
+      background-image: url($home-tablet-Img);
+    }
+    @include breakpoint-up(tablet) {
+      background-image: url($home-desktop-Img);
+    }
   }
   &.destination {
     background-image: url($destinationImg);

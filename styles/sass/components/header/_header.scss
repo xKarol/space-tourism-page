@@ -1,22 +1,30 @@
 .header {
   height: 96px;
   position: absolute;
-  top: 40px;
+  top: 0;
   right: 0;
   left: 55px;
   display: flex;
   align-items: center;
   justify-content: space-between;
   z-index: 50;
+
+  @include breakpoint-up(tablet) {
+    top: 40px;
+  }
   &__stroke {
     width: 403px;
     height: 1px;
     background-color: $white;
     position: absolute;
-    left: 107px;
+    right: 800px;
     top: 50%;
     opacity: 0.25;
     transform: translateY(-50%);
     z-index: 1;
+    display: none;
+    @include breakpoint-up(tablet) {
+      display: block;
+    }
   }
 }

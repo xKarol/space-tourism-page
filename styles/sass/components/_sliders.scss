@@ -2,7 +2,8 @@
   display: flex;
   justify-content: center;
   margin-top: 40px;
-  @include breakpoint-up(large) {
+  @include breakpoint-up(tablet) {
+    flex-direction: row;
     margin-top: 120px;
     justify-content: flex-start;
   }
@@ -28,8 +29,24 @@
   }
   &.--technology {
     flex-direction: column;
-    margin-right: 80px;
+    margin-right: 0;
     margin-top: 0px;
+    &.--technology {
+      flex-direction: row;
+      @include breakpoint-up(tablet) {
+        margin-right: 80px;
+        flex-direction: column;
+      }
+      .sliders__slider {
+        &:not(:last-child) {
+          margin-right: 16px;
+          @include breakpoint-up(tablet) {
+            margin-right: 0;
+            flex-direction: column;
+          }
+        }
+      }
+    }
     .sliders__slider {
       color: $white;
       opacity: 1;

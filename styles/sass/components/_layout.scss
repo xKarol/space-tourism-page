@@ -39,5 +39,9 @@ $technologyImg: "../../public/assets/technology/background-technology-desktop.jp
   &.technology {
     background-image: url($technologyImg);
     padding-right: 0;
+    padding-left: 0;
+    @include breakpoint-up(tablet) {
+      padding-left: 11.5vw;
+    }
   }
 }

@@ -1,6 +1,6 @@
 .home__explore {
-  width: 242px;
-  height: 242px;
+  width: 150px;
+  height: 150px;
   border-radius: 50%;
   background-color: $white;
   position: relative;
@@ -10,12 +10,19 @@
   margin-top: auto;
   flex-shrink: 0;
   @include heading4;
+  font-size: 20px;
   color: #000;
   margin-top: 156px;
+  @include breakpoint-up(mobile) {
+    width: 242px;
+    height: 242px;
+    font-size: 32px;
+  }
   @include breakpoint-up(tablet) {
     margin-top: 0;
     width: 274px;
     height: 274px;
+    font-size: 32px;
   }
   &::before {
     content: "";

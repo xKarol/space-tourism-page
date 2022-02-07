@@ -10,8 +10,8 @@ export default function Home() {
       <Header />
       <section className="main-section --home">
         <div className="main-section__container">
-          <section className="main-section__body">
-            <Heading text={"So, you want to travel to"} className="heading-5" />
+          <section className="main-section__body --center">
+            <Heading text={"So, you want to travel to"} className="heading-5 --home" />
             <b className="heading-1">Space</b>
             <Description
               text={

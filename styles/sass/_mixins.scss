@@ -57,9 +57,12 @@
   @include text-style;
   font-family: "Barlow Condensed", sans-serif;
   font-size: 18px;
-  line-height: 32px;
+  line-height: 25px;
   color: $light-blue;
   text-transform: initial;
+  @include breakpoint-up(mobile) {
+    line-height: 32px;
+  }
 }
 
 @mixin nav-stroke {

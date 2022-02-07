@@ -9,8 +9,12 @@
   }
   &__slider {
     border: none;
-    width: 15px;
-    height: 15px;
+    width: 10px;
+    height: 10px;
+    @include breakpoint-up(mobile) {
+      width: 15px;
+      height: 15px;
+    }
     border-radius: 50%;
     background-color: $white;
     opacity: 0.17;
@@ -25,6 +29,16 @@
     }
     &:not(:last-child) {
       margin-right: 24px;
+    }
+  }
+  &.--crew {
+    order: -1;
+    margin-top: 0;
+    margin-bottom: 32px;
+    @include breakpoint-up(mobile) {
+      order: unset;
+      margin-top: 40px;
+      margin-bottom: 0;
     }
   }
   &.--technology {
@@ -51,13 +65,19 @@
       color: $white;
       opacity: 1;
       background-color: transparent;
-      width: 80px;
-      height: 80px;
+      width: 40px;
+      height: 40px;
       border: 1px solid rgba($white, 0.25);
       display: flex;
       align-items: center;
       justify-content: center;
       @include heading4;
+      font-size: 16px;
+      @include breakpoint-up(mobile) {
+        width: 80px;
+        height: 80px;
+        font-size: 32px;
+      }
       &:not(:last-child) {
         margin-right: 0;
         margin-bottom: 32px;

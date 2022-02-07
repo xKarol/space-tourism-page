@@ -17,8 +17,15 @@
     }
     @include navtext;
     @include nav-stroke;
+    font-size: 14px;
+    @include breakpoint-up(mobile) {
+      font-size: 16px;
+    }
     &:not(:last-child) {
-      margin-right: 35px;
+      margin-right: 27px;
+      @include breakpoint-up(mobile) {
+        margin-right: 35px;
+      }
     }
   }
 }

@@ -36,7 +36,7 @@ export default function Technology({ technology }) {
                 type={TECHNOLOGY_SLIDER}
               />
 
-              <section className="main-section__body --technology">
+              <section className="main-section__body --center">
                 <Subheading
                   text={"The terminology..."}
                   className="--technology"

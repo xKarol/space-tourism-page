@@ -17,7 +17,7 @@ export default function Sliders({
 
   return (
     <div
-      className={`sliders ${type === TECHNOLOGY_SLIDER ? "--technology" : ""}`}
+      className={`sliders ${type === TECHNOLOGY_SLIDER ? "--technology" : "--crew"}`}
     >
       {[...new Array(total)].slice(0, 4).map((_, index) => (
         <button

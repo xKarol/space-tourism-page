@@ -103,6 +103,10 @@
           font-size: 28px;
         }
       }
+      animation: fade-in 0.75s ease-in-out forwards;
+      @include breakpoint-up(tablet) {
+        animation: slide-left 0.75s ease-in-out forwards;
+      }
     }
     &.--destination {
       @include heading2;

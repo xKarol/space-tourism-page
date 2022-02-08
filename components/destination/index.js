@@ -24,7 +24,7 @@ export default function Destination({ destinations }) {
             text={"Pick your destination"}
             className="--absolute"
           />
-          <div className="main-section__container">
+          <div className="main-section__container fade-in">
             <ImageComponent
               src={currentDestination.images.webp.substring(1)}
               alt={currentDestination.name}

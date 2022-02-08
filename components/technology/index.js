@@ -27,7 +27,7 @@ export default function Technology({ technology }) {
             text={"Space launch 101"}
             className="--absolute"
           />
-          <div className="main-section__container">
+          <div className="main-section__container fade-in">
             <div className="main-section__technology-box">
               <Slider
                 total={3}

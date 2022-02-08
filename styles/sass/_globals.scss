@@ -47,3 +47,19 @@ a {
 .heading-5 {
   @include heading5;
 }
+
+.slide-down {
+  animation: slide-down 0.75s ease-in-out forwards;
+}
+
+.slide-left {
+  animation: slide-left 0.75s ease-in-out forwards;
+}
+
+.pop-up {
+  animation: pop-up 0.75s ease-in-out forwards;
+}
+
+.fade-in {
+  animation: fade-in 0.75s ease-in-out forwards;
+}

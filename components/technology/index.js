@@ -22,7 +22,11 @@ export default function Technology({ technology }) {
       <Layout className="technology">
         <Header />
         <section className="main-section">
-          <Heading text={"Space launch 101"} className="--absolute" />
+          <Heading
+            number={3}
+            text={"Space launch 101"}
+            className="--absolute"
+          />
           <div className="main-section__container fade-in --technology">
             <div className="main-section__technology-box">
               <Slider

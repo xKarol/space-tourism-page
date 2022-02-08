@@ -18,6 +18,5 @@ export async function getStaticProps() {
     props: {
       technology: data.technology,
     },
-    revalidate: 120,
   };
 }

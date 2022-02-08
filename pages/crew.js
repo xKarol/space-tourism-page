@@ -18,6 +18,5 @@ export async function getStaticProps() {
     props: {
       crew: data.crew,
     },
-    revalidate: 120,
   };
 }

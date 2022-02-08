@@ -18,6 +18,5 @@ export async function getStaticProps() {
     props: {
       destinations: data.destinations,
     },
-    revalidate: 120,
   };
 }

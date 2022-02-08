@@ -13,6 +13,7 @@
     top: 40px;
   }
   &__stroke {
+    max-width: 403px;
     width: 403px;
     height: 1px;
     background-color: $white;
@@ -23,7 +24,7 @@
     transform: translateY(-50%);
     z-index: 1;
     display: none;
-    @include breakpoint-up(tablet) {
+    @media (min-width: 1350px) {
       display: block;
     }
   }

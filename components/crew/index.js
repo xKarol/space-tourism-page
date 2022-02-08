@@ -18,7 +18,7 @@ export default function Crew({ crew }) {
         <section className="main-section">
           <Heading number={2} text={"Meet your crew"} className="--absolute" />
           <div className="main-section__container">
-            <section className="main-section__body">
+            <section className="main-section__body --center">
               <Subheading text={currentCrew.role} className="--crew" />
               <Heading text={currentCrew.name} className="--crew" />
               <Description text={currentCrew.bio} />

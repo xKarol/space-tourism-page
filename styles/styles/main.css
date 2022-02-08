@@ -360,6 +360,7 @@ a {
 }
 
 .navbar__link b {
+  margin-right: 11px;
   font-weight: bold;
   display: none;
 }

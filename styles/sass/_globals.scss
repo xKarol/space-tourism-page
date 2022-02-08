@@ -24,6 +24,10 @@ a {
   color: $white;
 }
 
+.no-scroll {
+  overflow: hidden;
+}
+
 .logo {
   cursor: pointer;
 }

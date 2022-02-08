@@ -25,6 +25,10 @@ a {
   color: #ffffff;
 }
 
+.no-scroll {
+  overflow: hidden;
+}
+
 .logo {
   cursor: pointer;
 }
@@ -411,6 +415,8 @@ a {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    -webkit-animation: navbar-slide 0.4s ease-in-out forwards;
+            animation: navbar-slide 0.4s ease-in-out forwards;
   }
   .navbar.hamburger-menu .navbar__links {
     -webkit-box-orient: vertical;
@@ -440,6 +446,24 @@ a {
   .navbar.hamburger-menu .navbar__link:not(:last-child) {
     margin-right: 0;
     margin-bottom: 27px;
+  }
+}
+
+@-webkit-keyframes navbar-slide {
+  from {
+    right: -100%;
+  }
+  to {
+    right: 0;
+  }
+}
+
+@keyframes navbar-slide {
+  from {
+    right: -100%;
+  }
+  to {
+    right: 0;
   }
 }
 

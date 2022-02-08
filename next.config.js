@@ -3,14 +3,9 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.(png|jpg|gif)$/,
         use: [
           {
-            loader: "file-loader",
             options: {
-              name: "[path][name].[ext]",
-              context: path.resolve(__dirname, "src/"),
-              outputPath: "dist/",
               publicPath: "../",
               useRelativePaths: true,
             },
@@ -19,10 +14,4 @@ module.exports = {
       },
     ],
   },
-  plugins: [
-    new ExtractTextPlugin({
-      filename: "dist/[name].bundle.css",
-      allChunks: true,
-    }),
-  ],
 };

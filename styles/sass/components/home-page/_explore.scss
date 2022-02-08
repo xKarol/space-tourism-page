@@ -13,6 +13,7 @@
   font-size: 20px;
   color: #000;
   margin-top: 156px;
+  transition: all 200ms ease-in-out;
   @include breakpoint-up(mobile) {
     width: 242px;
     height: 242px;
@@ -23,6 +24,10 @@
     width: 274px;
     height: 274px;
     font-size: 32px;
+    @media (max-width: 950px) {
+      width: 200px;
+      height: 200px;
+    }
   }
   &::before {
     content: "";
@@ -35,6 +40,7 @@
     border-radius: 50%;
     background-color: $white;
     opacity: 0;
+    pointer-events: none;
     transition: all 200ms ease-in-out;
     cursor: pointer;
   }

@@ -10,11 +10,14 @@ import Subheading from "../subheading";
 import ImageComponent from "../image";
 import useWindowSize from "../../hooks/useWindowSize";
 import { TABLET_SCREEN } from "../../constants/screen-sizes";
+import useAnimation from "../../hooks/useAnimation";
 
 export default function Technology({ technology }) {
   const [activeId, setActiveId] = useState(0);
   const currentTechnology = technology[activeId];
   const { width } = useWindowSize();
+  const { animation, setAnimation } = useAnimation(activeId);
+
   return (
     <TechnologyContext.Provider
       value={{ currentTechnology, technology, activeId, setActiveId }}
@@ -27,7 +30,11 @@ export default function Technology({ technology }) {
             text={"Space launch 101"}
             className="--absolute"
           />
-          <div className="main-section__container fade-in --technology">
+
+          <div
+            className="main-section__container fade-in --technology"
+            onAnimationEndCapture={() => setAnimation(false)}
+          >
             <div className="main-section__technology-box">
               <Slider
                 total={3}
@@ -55,7 +62,7 @@ export default function Technology({ technology }) {
                   : currentTechnology.images.landscape.substring(1)
               }
               alt={currentTechnology.name}
-              className="--technology"
+              className={`--technology ${animation ? "fade-in" : ""}`}
             />
           </div>
         </section>

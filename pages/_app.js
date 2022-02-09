@@ -1,5 +1,5 @@
 import Head from "next/head";
-import styles from "../styles/styles/main.css";
+import "../styles/styles/main.css";
 
 function MyApp({ Component, pageProps }) {
   return (
@@ -8,7 +8,7 @@ function MyApp({ Component, pageProps }) {
         <meta name="theme-color" content="#0b0d17" />
         <title>Space Tourism</title>
       </Head>
-      <Component {...pageProps} />;
+      <Component {...pageProps} />
     </>
   );
 }

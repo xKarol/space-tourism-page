@@ -60,7 +60,7 @@
   line-height: 25px;
   color: $light-blue;
   text-transform: initial;
-  @include breakpoint-up(mobile) {
+  @include breakpoint-up(md) {
     line-height: 32px;
   }
 }

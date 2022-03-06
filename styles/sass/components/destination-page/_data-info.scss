@@ -6,29 +6,26 @@
   justify-content: center;
   flex-direction: column;
   margin-bottom: 50px;
-
-  @include breakpoint-up(mobile) {
-    flex-direction: row;
-  }
-  @include breakpoint-up(tablet) {
+  @include breakpoint-up(md) {
     margin-bottom: 0;
+    flex-direction: row;
     justify-content: flex-start;
   }
   padding-top: 28px;
   &__info {
     flex-shrink: 0;
     text-align: center;
-    @include breakpoint-up(tablet) {
+    @include breakpoint-up(md) {
       text-align: left;
     }
     &:first-child {
       margin-bottom: 32px;
-      @include breakpoint-up(mobile) {
+      @include breakpoint-up(md) {
         margin-bottom: 0;
       }
     }
     &:last-child {
-      @include breakpoint-up(mobile) {
+      @include breakpoint-up(md) {
         margin-left: 79px;
       }
     }

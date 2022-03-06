@@ -35,7 +35,7 @@ export default function Destination({ destinations }) {
               alt={currentDestination.name}
               className={`--planet ${animation ? "fade-in" : ""}`}
             />
-            <section className="main-section__body">
+            <section className="main-section__body --destination">
               <Navbar />
               <Heading
                 text={currentDestination.name}

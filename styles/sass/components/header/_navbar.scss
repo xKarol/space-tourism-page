@@ -9,10 +9,8 @@
   display: none;
   padding-left: 20px;
   @include breakpoint-up(sm) {
-    // width: 450px;
     display: flex;
   }
-
   @include breakpoint-up(md) {
     width: 75vw;
     max-width: 830px;
@@ -41,10 +39,8 @@
     @include nav-stroke;
     &:not(:last-child) {
       margin-right: 20px;
-
       @include breakpoint-up(lg) {
         margin-right: 48px;
-        // margin-right: 37px;
       }
     }
   }

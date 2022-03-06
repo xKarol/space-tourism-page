@@ -1,12 +1,15 @@
 $breakpoints-up: (
-  "mobile": "376px",
-  "tablet": "769px",
-  "desktop": "1440px",
+  "sm": "640px",
+  "md": "768px",
+  "lg": "1024px",
+  "xlg": "1400px",
 );
+
 $breakpoints-down: (
-  "mobile": "374px",
-  "tablet": "767px",
-  "desktop": "1439px",
+  "sm": "639px",
+  "md": "767px",
+  "lg": "1023px",
+  "xlg": "1399px",
 );
 
 @mixin breakpoint-up($size) {

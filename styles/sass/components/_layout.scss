@@ -24,46 +24,46 @@ $technology-desktop-Img: "/assets/technology/background-technology-desktop.jpg";
   background-repeat: no-repeat;
   padding: 136px 2.5vw;
   padding-bottom: 50px;
-  @include breakpoint-up(tablet) {
+  @include breakpoint-up(lg) {
     padding: 212px 11.5vw;
     padding-bottom: 131px;
   }
 
   &.home {
     background-image: url($home-mobile-Img);
-    @include breakpoint-up(mobile) {
+    @include breakpoint-up(md) {
       background-image: url($home-tablet-Img);
     }
-    @include breakpoint-up(tablet) {
+    @include breakpoint-up(lg) {
       background-image: url($home-desktop-Img);
     }
   }
   &.destination {
     background-image: url($destination-mobile-Img);
-    @include breakpoint-up(mobile) {
+    @include breakpoint-up(md) {
       background-image: url($destination-tablet-Img);
     }
-    @include breakpoint-up(tablet) {
+    @include breakpoint-up(lg) {
       background-image: url($destination-desktop-Img);
     }
   }
   &.crew {
     background-image: url($crew-mobile-Img);
-    @include breakpoint-up(mobile) {
+    @include breakpoint-up(md) {
       background-image: url($crew-tablet-Img);
     }
-    @include breakpoint-up(tablet) {
+    @include breakpoint-up(lg) {
       background-image: url($crew-desktop-Img);
     }
   }
   &.technology {
     background-image: url($technology-mobile-Img);
-    @include breakpoint-up(mobile) {
+    @include breakpoint-up(md) {
       background-image: url($technology-tablet-Img);
     }
     padding-right: 0;
     padding-left: 0;
-    @include breakpoint-up(tablet) {
+    @include breakpoint-up(lg) {
       padding-left: 11.5vw;
       background-image: url($technology-desktop-Img);
     }

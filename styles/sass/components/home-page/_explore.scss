@@ -1,33 +1,31 @@
 .home__explore {
-  width: 150px;
-  height: 150px;
+  width: 200px;
+  height: 200px;
   border-radius: 50%;
   background-color: $white;
   position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-top: auto;
+
   flex-shrink: 0;
   @include heading4;
-  font-size: 20px;
+  font-size: 26px;
   color: #000;
-  margin-top: 156px;
+  margin-top: 100px;
   transition: all 200ms ease-in-out;
-  @include breakpoint-up(mobile) {
+  @include breakpoint-up(sm) {
+    margin-top: auto;
+    margin-bottom: auto;
+  }
+  @include breakpoint-up(md) {
     width: 242px;
     height: 242px;
-    font-size: 32px;
   }
-  @include breakpoint-up(tablet) {
-    margin-top: 0;
+  @include breakpoint-up(lg) {
     width: 274px;
     height: 274px;
     font-size: 32px;
-    @media (max-width: 950px) {
-      width: 200px;
-      height: 200px;
-    }
   }
   &::before {
     content: "";

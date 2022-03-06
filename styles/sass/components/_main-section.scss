@@ -92,14 +92,15 @@
       width: max-content;
       font-size: 16px;
       @include breakpoint-up(md) {
+        top: 40px;
         left: 38.5px;
         font-size: 20px;
         transform: unset;
       }
       @include breakpoint-up(lg) {
+        top: -40px;
         left: 0;
         font-size: 28px;
-        transform: unset;
       }
       > b {
         @include heading5;

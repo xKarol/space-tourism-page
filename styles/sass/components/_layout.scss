@@ -23,10 +23,12 @@ $technology-desktop-Img: "/assets/technology/background-technology-desktop.jpg";
   background-position: center;
   background-repeat: no-repeat;
   padding: 136px 2.5vw;
-  padding-bottom: 50px;
   @include breakpoint-up(lg) {
     padding: 212px 11.5vw;
-    padding-bottom: 131px;
+  }
+  @include breakpoint-up(xlg) {
+    padding-left: 15vw;
+    padding-right: 15vw;
   }
 
   &.home {

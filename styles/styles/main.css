@@ -102,13 +102,18 @@ a {
   background-position: center;
   background-repeat: no-repeat;
   padding: 136px 2.5vw;
-  padding-bottom: 50px;
 }
 
 @media (min-width: 1024px) {
   .layout {
     padding: 212px 11.5vw;
-    padding-bottom: 131px;
+  }
+}
+
+@media (min-width: 1400px) {
+  .layout {
+    padding-left: 15vw;
+    padding-right: 15vw;
   }
 }
 
@@ -640,6 +645,7 @@ a {
 
 @media (min-width: 768px) {
   .main-section__heading.--absolute {
+    top: 40px;
     left: 38.5px;
     font-size: 20px;
     -webkit-transform: unset;
@@ -649,10 +655,9 @@ a {
 
 @media (min-width: 1024px) {
   .main-section__heading.--absolute {
+    top: -40px;
     left: 0;
     font-size: 28px;
-    -webkit-transform: unset;
-            transform: unset;
   }
 }
 
